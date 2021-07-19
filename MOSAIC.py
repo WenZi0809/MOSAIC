@@ -185,23 +185,6 @@ def select_pc(pcs, matrix, lc=[0], remv = None):
                 
     return lci 
 
-def similarity(mat, method = 'euclidean'):
-    mat = np.asarray(mat.T)
-    
-    ma = np.matrix(mat)
-    
-    if method == 'euclidean':
-       dis_mat = squareform(pdist(ma,method))
-       similarity_mat = 1/np.exp(dis_mat/(2 * 1))
-    elif method == 'cosine' :
-       dis_mat = squareform(pdist(ma,method))
-       similarity_mat = 1-dis_mat   
-    elif method == 'corr' :
-       similarity_mat = np.corrcoef(ma)
-    
-
-    return similarity_mat  
-
 def Kmeans_SVD(matrix, mask, cent = 0, cluster_number=4):
     ##input O/E matrix/gap position/centromere position/cluster number
     mat = matrix[mask][:,mask]
