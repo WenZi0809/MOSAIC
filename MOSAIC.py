@@ -185,7 +185,7 @@ def select_pc(pcs, matrix, lc=[0], remv = None):
                 
     return lci 
 
-def similarity(mat,method = 'euclidean'):
+def similarity(mat, method = 'euclidean'):
     mat = np.asarray(mat.T)
     
     ma = np.matrix(mat)
@@ -276,5 +276,5 @@ def Kmeans_SVD(matrix, mask, cent = 0, cluster_number=4):
 
 if __name__ == '__main__':
     oe, mask = get_oe(matrix)
-    labels = Kmeans_SVD(oe, mask)
+    labels = Kmeans_SVD(oe, mask, cent = 0, cluster_number=4)
 
