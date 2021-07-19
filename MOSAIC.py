@@ -2,7 +2,7 @@
 """
 Created on Tue Mar 09 10:06:07 2021
 
-@author: DELL
+@author: WenZi
 """
 from scipy.stats.mstats import zscore
 import numpy as np
